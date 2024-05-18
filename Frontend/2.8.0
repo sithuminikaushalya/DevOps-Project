@@ -1,0 +1,11 @@
++ jest@27.0.0
++ ajv@8.13.0
++ eslint@8.0.0
++ typescript@5.4.5
+added 44 packages from 32 contributors, updated 2 packages and audited 1618 packages in 66.015s
+
+268 packages are looking for funding
+  run `npm fund` for details
+
+found 2 vulnerabilities (1 moderate, 1 high)
+  run `npm audit fix` to fix them, or `npm audit` for details

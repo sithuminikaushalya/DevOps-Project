@@ -1,0 +1,27 @@
+
+
+.image-containerx {
+  width: 100%; 
+  max-width: 100%; 
+  height: auto; 
+  position: relative;
+}
+
+.image-containerx img {
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+  object-position: center; 
+}
+
+
+.containerx {
+  display: flex;
+  justify-content: center;
+  max-width: 50%;
+  margin: 0 auto; 
+}
+
+.image-containerx {
+  margin: 0 10px; 
+}
