@@ -8,38 +8,22 @@ import SignUp from './Components/SignUp';
 import LandingPage from './Components/LandingPage';
 import User from './Components/User';
 import Orders from './Components/Orders';
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
-
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-
     <Router>
-    <div>
-     
-     <Routes>
-      <Route path="" exact Component={LandingPage} /> 
-     </Routes>
-     <Routes>
-     <Route path="/add" exact Component={CreateOrder} />
-     </Routes>
-   
-     <Routes>
-     <Route path="/login" exact Component={Loging} />
-     </Routes>
-     <Routes>
-     <Route path="/Signup" exact Component={SignUp} />
-     </Routes>
-     <Routes>
-     <Route path="/user" exact Component={User} />
-     </Routes>
-     <Routes>
-     <Route path="/orders" exact Component={Orders} />
-     </Routes>
-    </div>
-    
+      <div>
+        <Routes>
+          <Route path="/" exact component={LandingPage} />
+          <Route path="/add" exact component={CreateOrder} />
+          <Route path="/login" exact component={Loging} />
+          <Route path="/signup" exact component={SignUp} />
+          <Route path="/user" exact component={User} />
+          <Route path="/orders" exact component={Orders} />
+        </Routes>
+      </div>
     </Router>
-    
   );
 }
 
