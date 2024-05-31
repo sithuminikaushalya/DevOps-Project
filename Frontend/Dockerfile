@@ -1,5 +1,5 @@
 # Use an official Node runtime as a parent image
-FROM node:14
+FROM node:18
 
 # Set the working directory
 WORKDIR /usr/src/app
@@ -18,7 +18,9 @@ RUN npm run build
 
 # Serve the app with a simple static server
 RUN npm install -g serve
-CMD ["serve", "-s", "build"]
 
 # Expose the port the app runs on
 EXPOSE 3000
+
+# Serve the built files
+CMD ["serve", "-s", "build"]

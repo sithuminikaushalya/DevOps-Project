@@ -5,11 +5,20 @@ services:
     build: 
       context: ./backend
     ports:
-      - "3001:3001"
+      - "3002:3001"
     volumes:
       - ./backend:/usr/src/app
     environment:
-      - NODE_ENV=development
+      MONGO_URL: mongodb://mongo:27017/mydatabase
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./data/db:/data/db
 
   frontend:
     build:
@@ -17,6 +26,6 @@ services:
     ports:
       - "3000:3000"
     volumes:
-      - ./frontend:/src/app
+      - ./frontend:/usr/src/app
     environment:
       - NODE_ENV=development
